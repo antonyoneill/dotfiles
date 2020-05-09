@@ -4,3 +4,15 @@
 	signingkey = 49293F327888CC24F7C8FD652DFFAD3B0C45D8A4
 [commit]
 	gpgsign = true
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	# Get the current branch name (not so useful in itself, but used in
+	# other aliases)
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	# Push the current branch to the remote "origin", and set it to track
+	# the upstream branch
+	publish = "!git push -u origin $(git branch-name)"
+	rbm = "!git reset --hard \"origin/$(git branch-name)\" && git fetch origin && git rebase origin/master && git push -f"
+
