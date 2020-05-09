@@ -1,0 +1,6 @@
+[user]
+	email = antony@ant-web.co.uk
+	name = Antony O'Neill
+	signingkey = 49293F327888CC24F7C8FD652DFFAD3B0C45D8A4
+[commit]
+	gpgsign = true
