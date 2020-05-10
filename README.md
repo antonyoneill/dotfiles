@@ -5,9 +5,18 @@ This setup is inspired by https://github.com/xero/dotfiles
 ## Installation
 
 ```bash
-git clone git@github.com:antonyoneill/dotfiles ~/dotfiles
+git clone \
+    --recursive \
+    git@github.com:antonyoneill/dotfiles \
+    ~/dotfiles
 
 stow -d ~/dotfiles/*
+```
+
+If you forget the `--recursive` you'll get warnings when vim is loaded. You'll have to run the following command to load the submodule
+
+```bash
+git submodule update
 ```
 
 ## GPG
