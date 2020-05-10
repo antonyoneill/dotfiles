@@ -1,7 +1,8 @@
 if ! command -v gpgconf >/dev/null 2>&1
 then
 	echo "gpgconf not installed"
-else
+elif (( ! ${+SSH_CLIENT} ))
+then
  	# Allow remote machines to access the local agent
 	unset SSH_AGENT_PID
 	if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
