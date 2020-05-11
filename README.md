@@ -26,9 +26,8 @@ I found that the documentation for GPG forwarding was disjointed. It appears tha
 Best bet I found was to disable the gpg-agent.service, and the various sockets.
 
 ```bash
-systemctl \
-	--user mask \
-	--now \
+systemctl --user \
+	mask --now \
 	gpg-agent.service \
 	gpg-agent.socket \
 	gpg-agent-ssh.socket \
