@@ -16,7 +16,7 @@ stow -d ~/dotfiles/*
 If you forget the `--recursive` you'll get warnings when vim is loaded. You'll have to run the following command to load the submodule
 
 ```bash
-git submodule update
+git submodule update --init
 ```
 
 ## GPG
