@@ -1,0 +1,4 @@
+.include /etc/pulse/default.pa
+
+### Enable Echo/Noise-Cancellation
+load-module module-echo-cancel
