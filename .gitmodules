@@ -1,3 +1,6 @@
 [submodule "vim/.vim_runtime"]
 	path = vim/.vim_runtime
 	url = git@github.com:antonyoneill/vimrc
+[submodule "zsh/.zsh/plugins/wd"]
+	path = zsh/.zsh/plugins/wd
+	url = git@github.com:antonyoneill/wd.git
