@@ -1,5 +1,6 @@
 # JetBrains
 .idea
+.generators
 
 # Vim files
 *~
