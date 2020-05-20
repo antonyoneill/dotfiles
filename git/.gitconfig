@@ -15,4 +15,5 @@
 	# the upstream branch
 	publish = "!git push -u origin $(git branch-name)"
 	rbm = "!git reset --hard \"origin/$(git branch-name)\" && git fetch origin && git rebase origin/master && git push -f"
-
+[core]
+	excludesfile = ~/.gitignore
