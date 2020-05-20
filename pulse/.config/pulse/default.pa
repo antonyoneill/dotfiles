@@ -1,4 +1,4 @@
 .include /etc/pulse/default.pa
 
 ### Enable Echo/Noise-Cancellation
-load-module module-echo-cancel
+load-module module-echo-cancel aec_method=webrtc aec_args="analog_gain_control=0 digital_gain_control=1"
