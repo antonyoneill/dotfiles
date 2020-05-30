@@ -9,7 +9,11 @@ then
 	  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 	fi
 
- 	# Set up GPG agent for use in the new shell
- 	export GPG_TTY="$(tty)"
- 	gpg-connect-agent updatestartuptty /bye >/dev/null
+    function gpg-tty {
+        # Set up GPG agent for use in the new shell
+        export GPG_TTY="$(tty)"
+        gpg-connect-agent updatestartuptty /bye >/dev/null
+    }
+
+    gpg-tty
 fi
