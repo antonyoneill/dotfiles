@@ -7,10 +7,9 @@ This setup is inspired by https://github.com/xero/dotfiles
 ```bash
 git clone \
     --recursive \
-    git@github.com:antonyoneill/dotfiles \
-    ~/dotfiles
+    git@github.com:antonyoneill/dotfiles
 
-stow -d ~/dotfiles/*
+stow -t ~ dotfiles/*/ 
 ```
 
 If you forget the `--recursive` you'll get warnings when vim is loaded. You'll have to run the following command to load the submodule
