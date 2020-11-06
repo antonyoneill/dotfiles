@@ -1,0 +1,4 @@
+PASSWORD="$(gpg --decrypt ~/.bw-password 2>/dev/null)"
+
+export BW_SESSION="$(bw unlock --raw $PASSWORD)"
+

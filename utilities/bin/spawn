@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Useful for spawning GUI apps from a nix shell
+
+program=$1
+
+{ nohup "$program" &>/dev/null & } &

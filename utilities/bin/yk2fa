@@ -1,0 +1,32 @@
+#!/usr/bin/env zsh
+
+if [ ! -e "$(which xclip)" ]
+then
+	echo "xclip not installed"
+    exit 1
+fi
+
+if [ ! -e "$(which ykman)" ]
+then
+	echo "ykman not installed"
+    exit 1
+fi
+
+search="$1"
+
+set -x
+output="$(ykman oath code $search)"
+
+code=$(awk "END{print \$NF}" <<< "$output")
+
+if [ -z "$code" ]
+then
+    message="No codes found for $search"
+else
+    xclip -selection clipboard <<< "$code"
+    message="Copied '$code' for $search"
+fi
+
+notify-send \
+    -t 2000 \
+    "$message"

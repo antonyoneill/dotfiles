@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+name=$1
+
+echo "Type content then ^D"
+
+encryptedContent=$(gpg --encrypt --recipient antony@ant-web.co.uk --armour)
+
+echo $encryptedContent
+
+bw get template item \
+    | jq ".name = \"$name\" | .notes = \"$encryptedContent\" | .secureNote = 1 | .type = 2" \
+    | bw encode \
+    | bw create item

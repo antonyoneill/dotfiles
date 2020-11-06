@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+name=$1
+
+set -x
+
+bw get item "$name" | jq --raw-output '.notes' | gpg --decrypt 2>/dev/null 
+
