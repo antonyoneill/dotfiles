@@ -4,3 +4,6 @@
 [submodule "zsh/.zsh/plugins/wd"]
 	path = zsh/.zsh/plugins/wd
 	url = git@github.com:antonyoneill/wd.git
+[submodule "zsh/.zsh/plugins/zsh-nix-shell"]
+	path = zsh/.zsh/plugins/zsh-nix-shell
+	url = https://github.com/chisui/zsh-nix-shell.git
