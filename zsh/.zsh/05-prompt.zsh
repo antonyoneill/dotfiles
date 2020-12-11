@@ -6,3 +6,5 @@ bindkey -e
 autoload -Uz promptinit
 promptinit
 prompt adam1
+
+setopt prompt_subst
