@@ -29,6 +29,12 @@ git submodule update --init
 
 ## GPG
 
+You'll probably forget to import the public key before trying to sign something with the yubikey. The following will find it on the keyserver
+
+```
+gpg --keyserver hkp://keyserver.ubuntu.com  --search-keys 2DFFAD3B0C45D8A4
+```
+
 I found that the documentation for GPG forwarding was disjointed. It appears that systemctl on Ubuntu automatically starts the gpg-agent, this overrides the RemoteForward socket, preventing the remote agent working correctly.
 
 Best bet I found was to disable the gpg-agent.service, and the various sockets.
