@@ -5,11 +5,20 @@ This setup is inspired by https://github.com/xero/dotfiles
 ## Installation
 
 ```bash
+
+# As a minimum 
+sudo apt install git stow vim zsh
+
+# Probably also need gpg key setup
+sudo apt install scdaemon
+
 git clone \
     --recursive \
     git@github.com:antonyoneill/dotfiles
 
-stow -t ~ dotfiles/*/ 
+cd dotfiles
+
+stow -t ~ */ 
 ```
 
 If you forget the `--recursive` you'll get warnings when vim is loaded. You'll have to run the following command to load the submodule
