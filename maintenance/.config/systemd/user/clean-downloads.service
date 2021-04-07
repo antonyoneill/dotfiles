@@ -1,0 +1,10 @@
+[Unit]
+Description=Clean up old downloads
+Wants=daily.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/date
+
+[Install]
+WantedBy=multi-user.target
