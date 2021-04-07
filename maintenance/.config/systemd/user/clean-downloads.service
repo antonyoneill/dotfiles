@@ -1,0 +1,9 @@
+[Unit]
+Description=Clean up old downloads
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c 'find ${HOME}/Downloads -mtime +30 -delete'
+
+[Install]
+WantedBy=multi-user.target
