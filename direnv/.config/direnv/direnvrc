@@ -1,0 +1,17 @@
+use_nvm() {
+  local nvm_sh
+
+  if [[ -n $NVM_DIR && -e "$NVM_DIR/nvm.sh" ]]; then
+    nvm_sh="$NVM_DIR/nvm.sh"
+  elif [[ -e '~/.nvm/nvm.sh' ]]; then
+    nvm_sh='~/.nvm/nvm.sh'
+  elif [[ -e '/usr/local/opt/nvm/nvm.sh' ]]; then
+    nvm_sh='/usr/local/opt/nvm/nvm.sh'
+  else
+    >&2 echo 'ERROR: nvm.sh not found.'
+    return 1
+  fi
+
+  source "$nvm_sh"
+  nvm use
+}
