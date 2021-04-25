@@ -1,2 +1,2 @@
 export EDITOR=vim
-export PATH=~/.local/bin:~/bin:$PATH
+export PATH=$PATH:./node_modules/.bin:~/.local/bin:~/bin
