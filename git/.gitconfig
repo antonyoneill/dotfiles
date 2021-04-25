@@ -1,20 +1,22 @@
 [user]
-	email = antony@ant-web.co.uk
-	name = Antony O'Neill
-	signingkey = 49293F327888CC24F7C8FD652DFFAD3B0C45D8A4
+    email = antony@ant-web.co.uk
+    name = Antony O'Neill
+    signingkey = 49293F327888CC24F7C8FD652DFFAD3B0C45D8A4
 [commit]
-	gpgsign = true
+    gpgsign = true
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	# Get the current branch name (not so useful in itself, but used in
-	# other aliases)
-	branch-name = "!git rev-parse --abbrev-ref HEAD"
-	# Push the current branch to the remote "origin", and set it to track
-	# the upstream branch
-	publish = "!git push -u origin $(git branch-name)"
-	rbd = "!git reset --hard \"origin/$(git branch-name)\" && git fetch origin && git rebase origin/development && git push -f"
-	rbm = "!git reset --hard \"origin/$(git branch-name)\" && git fetch origin && git rebase origin/master && git push -f"
+    initpls = "!git init && git ci -m 'Root Commit' --allow-empty"
+    co = checkout
+    ci = commit
+    ciane = !git commit --amend --no-edit
+    st = status
+    # Get the current branch name (not so useful in itself, but used in
+    # other aliases)
+    branch-name = "!git rev-parse --abbrev-ref HEAD"
+    # Push the current branch to the remote "origin", and set it to track
+    # the upstream branch
+    publish = "!git push -u origin $(git branch-name)"
+    rbd = "!git reset --hard \"origin/$(git branch-name)\" && git fetch origin && git rebase origin/development && git push -f"
+    rbm = "!git reset --hard \"origin/$(git branch-name)\" && git fetch origin && git rebase origin/master && git push -f"
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
