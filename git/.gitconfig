@@ -10,6 +10,7 @@
     ci = commit
     ciane = !git commit --amend --no-edit
     st = status
+    lola = log --all --decorate --oneline --graph
     # Get the current branch name (not so useful in itself, but used in
     # other aliases)
     branch-name = "!git rev-parse --abbrev-ref HEAD"
