@@ -1,0 +1,3 @@
+#!/bin/bash
+
+WSLENV=$WSLENV:BW_SESSION bw.exe $@

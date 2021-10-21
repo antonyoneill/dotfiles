@@ -1,4 +1,11 @@
+if [[ -z $WSLENV ]]
+then
+    executable="bw.exe"
+else
+    executable="bw"
+fi
+
 PASSWORD="$(gpg --decrypt ~/.bw-password 2>/dev/null)"
 
-export BW_SESSION="$(bw unlock --raw $PASSWORD)"
+export BW_SESSION="$(${executable} unlock --raw $PASSWORD)"
 
