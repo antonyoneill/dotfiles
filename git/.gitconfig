@@ -7,10 +7,11 @@
 [alias]
     initpls = "!git init && git ci -m 'Root Commit' --allow-empty"
     co = checkout
-    ci = commit
+    ci = commit -v
     ciane = !git commit --amend --no-edit
     st = status
     lola = log --all --decorate --oneline --graph
+    recover-rejected-commit = "!git ci -e --file=$(git rev-parse --git-dir)/COMMIT_EDITMSG"
     # Get the current branch name (not so useful in itself, but used in
     # other aliases)
     branch-name = "!git rev-parse --abbrev-ref HEAD"
@@ -21,3 +22,5 @@
     rbm = "!git reset --hard \"origin/$(git branch-name)\" && git fetch origin && git rebase origin/master && git push -f"
 [core]
     excludesfile = ~/.gitignore
+[init]
+    defaultBranch = main
